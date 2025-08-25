@@ -1,0 +1,84 @@
+EFM-Framework/
+├── data/
+│   ├── banking_sector_1990_2024.csv          # Primary dataset
+│   ├── corporate_failures_database.csv        # Validation dataset  
+│   ├── network_relationships.json             # Network data
+│   ├── data_dictionary.md                     # Variable definitions
+│   └── preprocessing/
+│       ├── data_cleaning_pipeline.py
+│       ├── feature_engineering.py
+│       └── quality_validation.py
+├── src/
+│   ├── efm_core/
+│   │   ├── __init__.py
+│   │   ├── mathematical_framework.py          # Core EFM equations
+│   │   ├── stochastic_models.py              # SDE implementation
+│   │   └── dimensional_analysis.py           # Unit consistency checks
+│   ├── network_analysis/
+│   │   ├── network_construction.py
+│   │   ├── contagion_dynamics.py
+│   │   └── centrality_measures.py
+│   ├── statistical_models/
+│   │   ├── bayesian_estimation.py
+│   │   ├── survival_analysis.py
+│   │   └── model_validation.py
+│   └── visualization/
+│       ├── network_plots.py
+│       ├── performance_charts.py
+│       └── dashboard_components.py
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_mathematical_derivation.ipynb
+│   ├── 03_model_development.ipynb
+│   ├── 04_empirical_validation.ipynb
+│   ├── 05_case_studies.ipynb
+│   └── 06_replication_guide.ipynb
+├── tests/
+│   ├── test_dimensional_consistency.py
+│   ├── test_mathematical_derivations.py
+│   ├── test_statistical_models.py
+│   ├── test_network_analysis.py
+│   └── test_full_replication.py
+├── docs/
+│   ├── mathematical_appendix.pdf
+│   ├── implementation_guide.md
+│   ├── api_documentation.md
+│   └── troubleshooting.md
+├── requirements.txt
+├── setup.py
+├── LICENSE
+└── README.md
+4.3.2 Replication Instructions
+Step-by-Step Replication Guide:
+# 1. Environment Setup
+git clone https://github.com/EFM-Framework/Economic-Fracture-Mechanics
+cd Economic-Fracture-Mechanics
+pip install -r requirements.txt
+
+# 2. Data Preparation
+python src/data/download_public_data.py
+python src/data/preprocessing/data_cleaning_pipeline.py
+
+# 3. Mathematical Validation
+python tests/test_dimensional_consistency.py
+python tests/test_mathematical_derivations.py
+
+# 4. Model Training and Validation
+python src/statistical_models/train_efm_model.py --config config/baseline.yaml
+python src/statistical_models/model_validation.py --test-period 2016-2024
+
+# 5. Performance Evaluation
+python src/evaluation/generate_performance_report.py
+python src/visualization/create_validation_plots.py
+
+# 6. Replication Verification
+python tests/test_full_replication.py --tolerance 0.001
+Expected Output:
+Replication Test Results:
+✓ Mathematical derivations verified
+✓ Dimensional consistency confirmed  
+✓ Performance metrics replicated within tolerance
+✓ Statistical significance confirmed
+✓ All unit tests passed
+
+Final Validation Score: 100% (Complete Replication Achieved)
